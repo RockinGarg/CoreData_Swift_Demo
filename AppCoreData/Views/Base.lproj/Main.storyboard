@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FileName" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="REg-hG-hFb">
+                                <rect key="frame" x="10" y="40" width="355" height="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="12.22" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="5c2-yE-xMw">
+                                <rect key="frame" x="10" y="80" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Uploaded Status" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="3qj-a2-22k">
+                                <rect key="frame" x="10" y="120" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kX8-dX-DU0">
+                                <rect key="frame" x="20" y="160" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3GU-gA-W6t"/>
+                                </constraints>
+                                <state key="normal" title="Save Record"/>
+                                <connections>
+                                    <action selector="saveNewRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zrj-8f-ele"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEx-Nx-KaO">
+                                <rect key="frame" x="20" y="230" width="335" height="50"/>
+                                <state key="normal" title="Update Record"/>
+                                <connections>
+                                    <action selector="updateARecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ytu-6V-r58"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4S-FR-oMq">
+                                <rect key="frame" x="20" y="300" width="335" height="50"/>
+                                <state key="normal" title="Get all Record"/>
+                                <connections>
+                                    <action selector="getAllRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CmF-Za-EN4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3U-jH-OLg">
+                                <rect key="frame" x="20" y="370" width="335" height="50"/>
+                                <state key="normal" title="Delete All Records"/>
+                                <connections>
+                                    <action selector="deleteAllRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6L5-l5-66T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3qj-a2-22k" firstAttribute="height" secondItem="REg-hG-hFb" secondAttribute="height" id="2ON-sc-PZJ"/>
+                            <constraint firstItem="l3U-jH-OLg" firstAttribute="top" secondItem="F4S-FR-oMq" secondAttribute="bottom" constant="20" id="2fl-QA-pLi"/>
+                            <constraint firstItem="kX8-dX-DU0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="529-qT-9QD"/>
+                            <constraint firstItem="5c2-yE-xMw" firstAttribute="height" secondItem="REg-hG-hFb" secondAttribute="height" id="7gl-Vt-WvC"/>
+                            <constraint firstItem="F4S-FR-oMq" firstAttribute="width" secondItem="ZEx-Nx-KaO" secondAttribute="width" id="ABx-MJ-IBa"/>
+                            <constraint firstItem="kX8-dX-DU0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D4c-fl-1dW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="REg-hG-hFb" secondAttribute="trailing" constant="10" id="F6t-cy-ddO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kX8-dX-DU0" secondAttribute="trailing" constant="20" id="IBt-Ik-N1F"/>
+                            <constraint firstItem="5c2-yE-xMw" firstAttribute="leading" secondItem="REg-hG-hFb" secondAttribute="leading" id="MCH-QO-abd"/>
+                            <constraint firstItem="ZEx-Nx-KaO" firstAttribute="leading" secondItem="kX8-dX-DU0" secondAttribute="leading" id="Pbg-72-lc3"/>
+                            <constraint firstItem="F4S-FR-oMq" firstAttribute="top" secondItem="ZEx-Nx-KaO" secondAttribute="bottom" constant="20" id="T4j-J7-F6L"/>
+                            <constraint firstItem="REg-hG-hFb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Tcs-R8-mcP"/>
+                            <constraint firstItem="l3U-jH-OLg" firstAttribute="leading" secondItem="F4S-FR-oMq" secondAttribute="leading" id="XEt-Vz-T2t"/>
+                            <constraint firstItem="5c2-yE-xMw" firstAttribute="width" secondItem="REg-hG-hFb" secondAttribute="width" id="aAE-J6-wbA"/>
+                            <constraint firstItem="l3U-jH-OLg" firstAttribute="height" secondItem="F4S-FR-oMq" secondAttribute="height" id="bgO-5F-hSF"/>
+                            <constraint firstItem="3qj-a2-22k" firstAttribute="top" secondItem="5c2-yE-xMw" secondAttribute="bottom" constant="10" id="bgq-x0-Ohf"/>
+                            <constraint firstItem="ZEx-Nx-KaO" firstAttribute="top" secondItem="kX8-dX-DU0" secondAttribute="bottom" constant="20" id="chW-SD-mQZ"/>
+                            <constraint firstItem="ZEx-Nx-KaO" firstAttribute="height" secondItem="kX8-dX-DU0" secondAttribute="height" id="d4a-pY-f1z"/>
+                            <constraint firstItem="l3U-jH-OLg" firstAttribute="width" secondItem="F4S-FR-oMq" secondAttribute="width" id="d5g-2H-Jrh"/>
+                            <constraint firstItem="REg-hG-hFb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="gBs-NK-w53"/>
+                            <constraint firstItem="3qj-a2-22k" firstAttribute="width" secondItem="REg-hG-hFb" secondAttribute="width" id="hDE-nr-bjX"/>
+                            <constraint firstItem="F4S-FR-oMq" firstAttribute="height" secondItem="ZEx-Nx-KaO" secondAttribute="height" id="hsr-4D-ez3"/>
+                            <constraint firstItem="kX8-dX-DU0" firstAttribute="top" secondItem="3qj-a2-22k" secondAttribute="bottom" constant="10" id="kmi-ad-ocx"/>
+                            <constraint firstItem="F4S-FR-oMq" firstAttribute="leading" secondItem="ZEx-Nx-KaO" secondAttribute="leading" id="nTF-cK-gLT"/>
+                            <constraint firstItem="3qj-a2-22k" firstAttribute="leading" secondItem="REg-hG-hFb" secondAttribute="leading" id="nxu-7K-UR2"/>
+                            <constraint firstItem="ZEx-Nx-KaO" firstAttribute="width" secondItem="kX8-dX-DU0" secondAttribute="width" id="qr6-e0-Kkx"/>
+                            <constraint firstItem="REg-hG-hFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vvm-Vp-nWv"/>
+                            <constraint firstItem="5c2-yE-xMw" firstAttribute="top" secondItem="REg-hG-hFb" secondAttribute="bottom" constant="10" id="wlD-80-TAc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="durationTF" destination="5c2-yE-xMw" id="lyo-LO-EcQ"/>
+                        <outlet property="fileNameTF" destination="REg-hG-hFb" id="wqM-TN-ao9"/>
+                        <outlet property="statusTF" destination="3qj-a2-22k" id="euW-Cf-9qN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
